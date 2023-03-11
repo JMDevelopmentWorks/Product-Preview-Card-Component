@@ -1,0 +1,21 @@
+.button {
+   margin: 0 .5rem;
+    display: block;
+    background-color: $c-darkcyan;
+    text-decoration: none;
+    color: $c-white;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: .75rem;
+    transition: all .5s ease;
+
+
+    &:hover{
+        background-color: darken($c-darkcyan, 10%)
+    }
+    svg {
+        margin-right: 0.35rem;
+    }
+}

@@ -1,0 +1,104 @@
+.features {
+    display: flex;
+    justify-content: center;
+    margin: 5rem auto;
+
+
+    &-product  {
+        border-radius: .5rem;
+        max-width: 375px;
+        background-color: $c-white;
+       
+        
+
+        &__mobile-img {
+            border-radius: .5rem .5rem 0 0 ;
+        }
+        
+        &__desktop-img {
+            display: none;
+        }
+
+        &__price {
+            align-items: center;
+            display: flex;
+            gap: 2rem;
+           
+
+            p {
+                font-family: $title-font;
+                color: $c-darkcyan;
+                font-size: 1.75rem;
+            
+                & + p {
+                    font-size: .9rem;
+                    font-family: $text-font;
+                    color: $c-darkgrayishblue;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        &__category {
+            color: $c-darkgrayishblue;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+        }
+
+        &__content {
+           padding: 1.25rem;
+        }
+    
+        &__title {
+            color: $c-darkblue;
+            font-family: $title-font;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: .02rem;
+        }
+        
+        &__text {
+            color: $c-darkgrayishblue;
+            letter-spacing: .02rem;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .features {
+
+        &-product {
+            max-width: 1440px;
+            display: flex;
+            border-radius: 1rem;
+            max-height: 700px;
+            
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 5rem 3rem 2rem; 
+            max-width: 400px;
+            gap: 1.75rem;
+            margin-left: -7rem;
+          
+           .button {
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+           }
+        }
+
+        &__mobile-img {
+            display: none;
+        }
+
+        &__desktop-img {
+            display: inline-block;
+            border-radius: 1rem 0 0 1rem;
+            object-fit: contain;
+            object-position: left top;
+        }
+
+        }
+    }
+}
